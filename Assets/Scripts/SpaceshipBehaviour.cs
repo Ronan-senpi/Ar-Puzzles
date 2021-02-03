@@ -5,10 +5,8 @@ using UnityEngine;
 public class SpaceshipBehaviour : MonoBehaviour
 {
     [SerializeField] private List<Transform> shipParts = new List<Transform>();
-    [SerializeField] private Vector3 globalDirection;
     [SerializeField] private float tolerance;
-    [SerializeField] private float maxDistance;
-
+    private float angle;
     private bool isCompleted;
 
     // Start is called before the first frame update
@@ -31,11 +29,11 @@ public class SpaceshipBehaviour : MonoBehaviour
     {
         for(int i = 0; i < shipParts.Count; i++)
         {
-            //float angle = Vector3.Angle();
-            //if()
-            //{
-            //    return false;
-            //}
+            angle = Vector3.Angle(Vector3.forward, -shipParts[i].up);
+            if(!(angle >= 0 - tolerance && angle <= 0 + tolerance))
+            {
+                return false;
+            }
         }
         return true;
     }
