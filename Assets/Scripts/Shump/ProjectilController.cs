@@ -22,4 +22,5 @@ public class ProjectilController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }
