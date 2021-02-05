@@ -32,6 +32,7 @@ public class ShootController : MonoBehaviour
             passedTimeFromLastShoot = 0f;
             canShoot = false;
             GameObject p = Instantiate(projectil, instancatePosition.position, Quaternion.identity);
+
         }
     }
 }
