@@ -4,25 +4,43 @@ using UnityEngine;
 
 public class SpaceshipBehaviour : MonoBehaviour
 {
+    private static SpaceshipBehaviour instance;
+    public static SpaceshipBehaviour Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindObjectOfType<SpaceshipBehaviour>();
+
+            return instance;
+        }
+    }
+
     [SerializeField] private List<Transform> shipParts = new List<Transform>();
     [SerializeField] private float tolerance;
     private float angle;
     private bool isCompleted;
+    private int numberOfPartsOrdered;
+    public int NumberOfPartsOrdered
+    {
+        get { return numberOfPartsOrdered; }
+        set { numberOfPartsOrdered = value; }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        isCompleted = false;   
+        isCompleted = false;
+        numberOfPartsOrdered = 0;
     }
 
     // Update is called once per framez
     void Update()
     {
-        Debug.Log(CheckPartsRotation());
-        //if (CheckPartsRotation())
-        //{
-        //    isCompleted = true;
-        //}
+        if(numberOfPartsOrdered >= 2 && CheckPartsRotation())
+        {
+            Debug.Log("It's Victory !");
+        }
     }
 
     bool CheckPartsRotation()
@@ -35,6 +53,11 @@ public class SpaceshipBehaviour : MonoBehaviour
                 return false;
             }
         }
+        return true;
+    }
+
+    bool CheckOrder()
+    {
         return true;
     }
 }
