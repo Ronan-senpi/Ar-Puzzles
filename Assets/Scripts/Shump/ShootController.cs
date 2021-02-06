@@ -7,7 +7,7 @@ public class ShootController : MonoBehaviour
     [SerializeField]
     protected GameObject projectil;
     [SerializeField]
-    protected Transform instancatePosition;
+    protected Transform[] instancatePosition;
     [Range(0.2f, 5f)]
     [SerializeField]
     protected float cooldown = 1;
@@ -31,7 +31,11 @@ public class ShootController : MonoBehaviour
         {
             passedTimeFromLastShoot = 0f;
             canShoot = false;
-            GameObject p = Instantiate(projectil, instancatePosition.position, Quaternion.identity);
+            foreach (Transform ip in instancatePosition)
+            {
+                GameObject p = Instantiate(projectil, ip.position, Quaternion.identity);
+            }
+            AudioManager.Instance.Play("Pew");
 
         }
     }
