@@ -38,7 +38,7 @@ public class MeteorController : MonoBehaviour
     IEnumerator Destroy()
     {
         yield return new WaitForSeconds(lifetime);
-       // Destroy(gameObject);
+        Destroy(gameObject);
     }
     // Update is called once per frame
     void Update()
