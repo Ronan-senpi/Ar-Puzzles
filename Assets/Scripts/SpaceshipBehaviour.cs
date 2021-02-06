@@ -17,6 +17,7 @@ public class SpaceshipBehaviour : MonoBehaviour
     }
     [SerializeField] private GameObject completeShip;
     [SerializeField] private List<Transform> shipParts = new List<Transform>();
+    [SerializeField] private GameObject buttonLaunchScene;   
     [SerializeField] private float maxDistance;
     [SerializeField] private float toleranceRotation;
     private float angle;
@@ -37,7 +38,6 @@ public class SpaceshipBehaviour : MonoBehaviour
     // Update is called once per framez
     void Update()
     {
-        Debug.Log("LET'S GO");
       //  Debug.Log("Distance : " + CheckDistance());
         if(numberOfPartsOrdered >= 2 && CheckPartsRotation() && CheckDistance())
         {
@@ -47,7 +47,6 @@ public class SpaceshipBehaviour : MonoBehaviour
 
     bool CheckPartsRotation()
     {
-        Debug.Log("Launch Rotation");
         for(int i = 0; i < shipParts.Count; i++)
         {
             Debug.DrawLine(transform.position, Vector3.forward, Color.red);
@@ -63,7 +62,6 @@ public class SpaceshipBehaviour : MonoBehaviour
 
     bool CheckDistance()
     {
-        Debug.Log("Launch Distance");
         if (shipParts.Count > 1)
         {
             for (int i = 0; i < shipParts.Count - 1; i++)
@@ -85,6 +83,7 @@ public class SpaceshipBehaviour : MonoBehaviour
     void PuzzleVictory()
     {
         completeShip.SetActive(true);
+        buttonLaunchScene.SetActive(true);
         for(int i = 0; i < shipParts.Count; i++)
         {
             shipParts[i].gameObject.SetActive(false);
