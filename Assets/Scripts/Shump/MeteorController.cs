@@ -20,6 +20,9 @@ public class MeteorController : MonoBehaviour
     [SerializeField]
     bool movable = true;
 
+    [SerializeField]
+    LayerMask shipLayer;
+
     Transform toRotate;
     public void SetTarget(Transform spaceship)
     {
@@ -53,6 +56,18 @@ public class MeteorController : MonoBehaviour
         toRotate.Rotate(Vector3.left * currentRotation * currentSpeed * Time.deltaTime);
 
         //transform.rotation =;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if ((shipLayer.value & (1 << collision.gameObject.layer)) > 0)
+        {
+            ShipController sc;
+            if (collision.gameObject.TryGetComponent<ShipController>(out sc))
+            {
+                sc.TakeDamage(1);
+            }
+        }
     }
 
     internal void HitByProjectl()

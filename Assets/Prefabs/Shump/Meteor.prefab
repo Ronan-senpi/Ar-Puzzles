@@ -52,6 +52,9 @@ MonoBehaviour:
   rotationModifier: 15
   lifetime: 10
   movable: 1
+  shipLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!136 &3808352853148100014
 CapsuleCollider:
   m_ObjectHideFlags: 0

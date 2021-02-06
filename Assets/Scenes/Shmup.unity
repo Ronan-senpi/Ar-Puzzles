@@ -350,6 +350,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 645895448}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &923451202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1424185078102154085, guid: 47fd1a954ed25994c96667f18c705fef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1424185077718329552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &923451208
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923451202}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &950250569
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +508,11 @@ MonoBehaviour:
     loop: 1
   - name: Pew
     clip: {fileID: 8300000, guid: 8bcecffa8c0044b468348324fe3d23b9, type: 3}
+    volume: 0.188
+    pitch: 1
+    loop: 0
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 39dcaa8fc3756e54ea84ee56901b9e21, type: 3}
     volume: 0.188
     pitch: 1
     loop: 0
@@ -768,11 +795,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1424185078102154088, guid: 47fd1a954ed25994c96667f18c705fef,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47fd1a954ed25994c96667f18c705fef, type: 3}

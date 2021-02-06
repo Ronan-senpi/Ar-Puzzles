@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7350016169756798698}
   - component: {fileID: 7382707573807922504}
   - component: {fileID: 2157023826411019885}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1424185077830521195}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canon
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -120,7 +120,9 @@ GameObject:
   - component: {fileID: 1424185078102154086}
   - component: {fileID: 1424185078102154087}
   - component: {fileID: 1424185078102154088}
-  m_Layer: 0
+  - component: {fileID: 923451206}
+  - component: {fileID: 923451203}
+  m_Layer: 10
   m_Name: SpaceShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,6 +178,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meteor: {fileID: 693090354666977817, guid: a12eb8f302d03594289de076f05616e9, type: 3}
   meteorSpawnTime: 1
+--- !u!114 &923451206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424185078102154085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c87251cea1f57745952992167117f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healPoints: 1
+  deathExplosion: {fileID: 3132272085274523213, guid: 543c95efbd53bd74ca8e01418917a237,
+    type: 3}
+--- !u!65 &923451203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424185078102154085}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0983402, y: 0.026216343, z: 0.06514633}
+  m_Center: {x: -0.0008298978, y: 0.03301917, z: -0.08197813}
 --- !u!1 &1424185078352573532
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1424185078352573533}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Canon (1)
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
