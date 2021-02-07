@@ -66,6 +66,6 @@ MonoBehaviour:
     loop: 0
   - name: ThemePuzzle
     clip: {fileID: 8300000, guid: fd25d5aaf0547dd40b8c057a64433226, type: 3}
-    volume: 0.205
+    volume: 0.25
     pitch: 1
     loop: 1
