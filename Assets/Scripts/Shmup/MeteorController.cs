@@ -72,6 +72,7 @@ public class MeteorController : MonoBehaviour
 
     internal void HitByProjectl()
     {
+        ScoreManager.Instance.UpdateScore(10);
         Destroy(gameObject);
     }
 }
