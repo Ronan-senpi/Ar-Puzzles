@@ -47,7 +47,9 @@ public class SpaceshipBehaviour : MonoBehaviour
 
     bool CheckPartsRotation()
     {
-        for(int i = 0; i < shipParts.Count; i++)
+        Debug.Log("CheckRotation");
+
+        for (int i = 0; i < shipParts.Count; i++)
         {
             Debug.DrawLine(transform.position, Vector3.forward, Color.red);
             Debug.DrawLine(transform.position, -shipParts[i].up, Color.green);
@@ -62,6 +64,7 @@ public class SpaceshipBehaviour : MonoBehaviour
 
     bool CheckDistance()
     {
+        Debug.Log("CheckDistance");
         if (shipParts.Count > 1)
         {
             for (int i = 0; i < shipParts.Count - 1; i++)
