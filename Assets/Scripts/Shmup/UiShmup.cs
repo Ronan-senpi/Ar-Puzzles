@@ -15,6 +15,16 @@ public class UiShmup : MonoBehaviour
         pauseMenu.SetActive(b);
         Time.timeScale = b ? 0 : 1;
     }
+    public void TogglePause(bool b, float delay)
+    {
+        StartCoroutine(pause(b, delay));
+    }
+    private IEnumerator pause(bool b, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        pauseMenu.SetActive(b);
+        Time.timeScale = b ? 0 : 1;
+    }
 
     public void Quit()
     {
