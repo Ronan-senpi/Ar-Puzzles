@@ -29,7 +29,7 @@ public class UiShmup : MonoBehaviour
 
     public void Quit()
     {
-        //SceneManager.LoadScene(SOMEWHERE)
+        SceneManager.LoadScene("ShipScene");
     }
     public void Restart()
     {
