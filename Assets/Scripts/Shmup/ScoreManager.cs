@@ -26,4 +26,10 @@ public class ScoreManager : MonoBehaviour
         score += s;
         scoreTxt.text = score.ToString();
     }
+
+    public void Zero()
+    {
+        score = 0;
+        scoreTxt.text = score.ToString();
+    }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,5 +34,10 @@ public class ShipController : MonoBehaviour
         AudioManager.Instance.Play("Explosion");
         ui.TogglePause(true, 1.75f);
         gameObject.SetActive(false);
+    }
+
+    internal void Restore()
+    {
+        currentHeal = healPoints;
     }
 }

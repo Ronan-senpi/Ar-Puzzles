@@ -8,8 +8,9 @@ public class UiShmup : MonoBehaviour
     [SerializeField]
     GameObject pauseMenu;
     [SerializeField]
-    
-
+    ScoreManager sm;
+    [SerializeField]
+    ShipController shipm;
     public void TogglePause(bool b)
     {
         pauseMenu.SetActive(b);
@@ -32,7 +33,11 @@ public class UiShmup : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        sm.Zero();
+        TogglePause(false);
+        shipm.gameObject.SetActive(true);
+        shipm.Restore();
+
     }
 
 }

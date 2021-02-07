@@ -603,34 +603,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 645895448}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &774426262
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'shumpMaterial
-
-    14192'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 960931dcc12e47b58bfb13937220609d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &793778478
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +834,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1424185077718329552}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &923451205 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 923451206, guid: 47fd1a954ed25994c96667f18c705fef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1424185077718329552}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923451202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c87251cea1f57745952992167117f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &923451208
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -993,6 +977,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 465272924}
+  sm: {fileID: 1747403683}
+  shipm: {fileID: 923451205}
 --- !u!43 &1309602349
 Mesh:
   m_ObjectHideFlags: 0
@@ -1454,8 +1440,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -27, y: -16}
-  m_SizeDelta: {x: 96, y: 96}
+  m_AnchoredPosition: {x: -13, y: -32.338}
+  m_SizeDelta: {x: 102.291245, y: 128.9758}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1381250104
 MonoBehaviour:
@@ -1715,10 +1701,10 @@ RectTransform:
   m_Father: {fileID: 950250573}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.045, y: 1}
-  m_AnchorMax: {x: 0.6476471, y: 1}
-  m_AnchoredPosition: {x: 67, y: 0}
-  m_SizeDelta: {x: 174, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 128.7, y: -42.669}
+  m_SizeDelta: {x: 210.01758, y: 118.644806}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1511756157
 MonoBehaviour:
@@ -1802,7 +1788,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 20.36174, y: 0, z: 153.66159, w: 0}
+  m_margin: {x: 2.2291107, y: 0, z: 3.4200592, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1926,6 +1912,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1929547722
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'shumpMaterial
+
+    19462'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 960931dcc12e47b58bfb13937220609d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &2042984441 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 06a9380e6869fad49bef4934035342e3,
@@ -2221,7 +2235,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 774426262}
+  - {fileID: 1929547722}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2385,6 +2399,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273316979802062699, guid: 6c848db5e33b762498b99900a9b35e38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c848db5e33b762498b99900a9b35e38, type: 3}

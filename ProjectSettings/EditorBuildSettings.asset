@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/AssetsStore/NeonSphere - Starter Pack/Scenes/NeonScene.unity
-    guid: a4c251521ce2ec2499d5db4fd55c1c9f
+    path: Assets/Scenes/Shmup.unity
+    guid: c6b3fdcb1b0240c4297972cef303083f
   m_configObjects: {}
