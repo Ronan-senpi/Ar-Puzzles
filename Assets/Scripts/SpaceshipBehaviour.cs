@@ -85,6 +85,7 @@ public class SpaceshipBehaviour : MonoBehaviour
 
     void PuzzleVictory()
     {
+        AudioManager.Instance.Play("Victory");
         completeShip.SetActive(true);
         buttonLaunchScene.SetActive(true);
         for(int i = 0; i < shipParts.Count; i++)
