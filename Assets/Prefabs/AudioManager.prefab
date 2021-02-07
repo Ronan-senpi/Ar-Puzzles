@@ -59,3 +59,13 @@ MonoBehaviour:
     volume: 0.188
     pitch: 1
     loop: 0
+  - name: Victory
+    clip: {fileID: 8300000, guid: 44641e7c37ac29b43ba5d620e0bb8220, type: 3}
+    volume: 0.188
+    pitch: 1
+    loop: 0
+  - name: Sparkle
+    clip: {fileID: 8300000, guid: 4a05a5bd77d4d53459df977e2cd62d1a, type: 3}
+    volume: 0.188
+    pitch: 1
+    loop: 0

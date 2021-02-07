@@ -11,6 +11,7 @@ public class CompleteTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.Instance.Play("Sparkle");
         Instantiate(particles, transform.position, transform.rotation);
         coroutine = WaitParticules(2.5f);
         StartCoroutine(coroutine);
@@ -25,6 +26,7 @@ public class CompleteTest : MonoBehaviour
     private IEnumerator WaitParticules(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+        AudioManager.Instance.Play("Victory");
         Instantiate(new_object, transform.position, transform.rotation);
         Destroy(gameObject);
     }
