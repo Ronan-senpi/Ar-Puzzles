@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +8,8 @@ public class ShipController : MonoBehaviour
     [Range(1, 10)]
     [SerializeField]
     int healPoints = 1;
-
+    [SerializeField]
+    UiShmup ui;
     [SerializeField]
     GameObject deathExplosion;
     int currentHeal;
@@ -30,6 +32,12 @@ public class ShipController : MonoBehaviour
     {
         Instantiate(deathExplosion, transform.position, Quaternion.identity);
         AudioManager.Instance.Play("Explosion");
-        Destroy(gameObject);
+        ui.TogglePause(true, 1.75f);
+        gameObject.SetActive(false);
+    }
+
+    internal void Restore()
+    {
+        currentHeal = healPoints;
     }
 }
