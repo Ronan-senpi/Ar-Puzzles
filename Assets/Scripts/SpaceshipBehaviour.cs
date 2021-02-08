@@ -38,7 +38,9 @@ public class SpaceshipBehaviour : MonoBehaviour
     // Update is called once per framez
     void Update()
     {
-      //  Debug.Log("Distance : " + CheckDistance());
+        if (numberOfPartsOrdered < 0)
+            numberOfPartsOrdered = 0;
+
         if(numberOfPartsOrdered >= 2 && CheckPartsRotation() && CheckDistance())
         {
             PuzzleVictory();
@@ -47,13 +49,10 @@ public class SpaceshipBehaviour : MonoBehaviour
 
     bool CheckPartsRotation()
     {
-        Debug.Log("CheckRotation");
-
         for (int i = 0; i < shipParts.Count; i++)
         {
-            Debug.DrawLine(transform.position, Vector3.forward, Color.red);
-            Debug.DrawLine(transform.position, -shipParts[i].up, Color.green);
             angle = Vector3.Angle(Vector3.forward, -shipParts[i].up);
+            Debug.Log("Angle : " + angle);
             if(!(angle >= 0 - toleranceRotation && angle <= 0 + toleranceRotation))
             {
                 return false;
@@ -64,7 +63,6 @@ public class SpaceshipBehaviour : MonoBehaviour
 
     bool CheckDistance()
     {
-        Debug.Log("CheckDistance");
         if (shipParts.Count > 1)
         {
             for (int i = 0; i < shipParts.Count - 1; i++)
@@ -72,7 +70,7 @@ public class SpaceshipBehaviour : MonoBehaviour
                 for (int j = i + 1; j < shipParts.Count; j++)
                 {
                     dist = Vector3.Distance(shipParts[i].transform.position, shipParts[j].transform.position);
-                    Debug.Log(dist);
+                    Debug.Log("Distance : " + dist);
                     if(dist > maxDistance)
                     {
                         return false;
@@ -91,5 +89,10 @@ public class SpaceshipBehaviour : MonoBehaviour
         {
             shipParts[i].gameObject.SetActive(false);
         }
+    }
+
+    public void DecrementNumberOfPartsOrdered()
+    {
+        numberOfPartsOrdered--;
     }
 }
