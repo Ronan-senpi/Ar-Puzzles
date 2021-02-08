@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Theme
+  - name: ThemeShmup
     clip: {fileID: 8300000, guid: 6e9b4f36db5ba294db3bdc71ee7fce4d, type: 3}
     volume: 0.25
     pitch: 1
@@ -59,3 +59,13 @@ MonoBehaviour:
     volume: 0.188
     pitch: 1
     loop: 0
+  - name: Victory
+    clip: {fileID: 8300000, guid: 86c366f779837ef4e9c01a2ddceca514, type: 3}
+    volume: 0.213
+    pitch: 1
+    loop: 0
+  - name: ThemePuzzle
+    clip: {fileID: 8300000, guid: fd25d5aaf0547dd40b8c057a64433226, type: 3}
+    volume: 0.25
+    pitch: 1
+    loop: 1

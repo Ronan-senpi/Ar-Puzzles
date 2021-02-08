@@ -2,6 +2,7 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -34,7 +35,11 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        Play("Theme");
+        string scene = SceneManager.GetActiveScene().name;
+        if(scene == "ShipScene")
+            Play("ThemePuzzle");
+        else if(scene == "Shmup")
+            Play("ThemeShmup");
     }
 
     public void Play(string name)
